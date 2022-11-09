@@ -70,6 +70,17 @@ To do this issue the command:
 Where `-t` is your theme name and `-r` is the name with which to tag the 
 container.
 
+<<<<<<< HEAD
 Themes must exist in `/template/custom/<theme_name>` to be built.
 They are build using inheritance from the default theme.
 Sigme theme is located this template directory.
+=======
+Themes must exist in `/template/custom/<theme_name>` to be built. They 
+are build using inheritance from the default theme.
+
+## Translations
+
+We are not in a position to accept translated contributions for Manuals. 
+
+Please see our [FAQ](https://community.xibo.org.uk/t/how-can-i-translate-xibo/11183) for further information.
+>>>>>>> upstream/master
