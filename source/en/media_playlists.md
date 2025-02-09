@@ -1,160 +1,216 @@
-<!--toc=media-->
+---
+toc: "media"
+maxHeadingLevel: 3
+minHeadingLevel: 2
+aliases:
+  - "layouts_timeline"
+  - "media_module_spacer"
+  - "media_module_text"
+excerpt: "Playlists contain a timeline of ordered content which can be re-used across multiple Layouts"
+keywords: "re-usable, slide show, add multiple items, show a sequence of content, schedule playlists, dynamic playlist, playlist editor, spacer widget, text widget, widget expiry dates, spots, play ordering, embedding playlists"
+persona: "content creator, super administrator, user, schedule manager"
+---
 
 # Playlists
 
-{tip}
+Playlists are used to show a sequence of media items (such as an image slideshow). There are two ways to create a Playlist:
 
-**Please note:**
+- Create [Playlists](media_playlists) independently to a Layout. Global Playlists can be scheduled to Displays without the creation of a Layout. Playlists created outside of the Layout Editor are still shown for selection from the Add Playlist function from the Layout Editor.
+- [Add Playlists](layouts_editor_playlists.html#content-add-playlists) directly to a Layout from the Layout Editor. Local Playlists can be converted to be saved for re-use as a global Playlist. Saved Playlists will be shown in the Layout Editor to add to Layouts.
 
-- If you are using a v3.0.x CMS, please click [here](media_playlists_3.html)
-- If you are using a v2.0.x CMS, please click [here](media_playlists_2.html)
-  {/tip}
+## Feature Overview:
 
-Playlists allow for the creation of 'Reusable Playlists' which are created and managed independently to Layouts. Once created, Playlists can then be easily reused across multiple Regions and Layouts.
-
-Think of Playlists as a two part process:
-
-1. **The Playlist** (contains the content and configuration of media to be shown)
-2. **The Sub-Playlist Widget** (once added to Layouts, Playlists can be selected and further configured to Play in a specified order)
-
-Playlists are administered by clicking on **Playlists** under the **Library** section of the main menu:
-
-![Playlist Grid](img/v3_media_playlists_grid.png)
-
-The **Folder** tree will open by default:
-
-- Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.
-
-or
-
-- Tick **All Folders** to include searching in the Root Folder and return results based on any filters applied to the grid.
-
-{tip}
-Click the Folders icon to toggle on/off from view.  When Folders are hidden from view, the file path for the selected folder will be shown!
-{/tip}
-
-The Playlists [Grid](tour_grids.html) allows you to edit existing and create new. 
-
-### Create a new Playlist
-
-- Click on the **Add Playlist** button and complete the appropriate form fields:
+- Create and configure independently to Layouts.
+- Add and maintain content [dynamically](media_playlists.html#content-dynamically-adding-media).
+- Update Playlist content without accessing Layouts.
+- Schedule directly from the Playlist grid without the need to add to a Layout.
+- Combine content from a variety of Playlists to be shown.
+- Set the maximum number of items to be shown from a Playlist.
+- Control how long each item on a Playlist should show before moving onto the next item.
+- Set Expiry Dates for media items added to a Playlist.
 
 
-![Add Playlist](img/v3_media_playlists_add.png)
+## Creating a Playlist
 
-- Playlists can be optionally saved to **Folders**.
+Streamline resources and save time by creating Playlists to hold multiple items of content to be shown on Displays. Create Playlists to target and collate content for specific requirements, locations, subject categories etc. 
 
+Playlists that are created independently to Layouts and do not require additional User access to Layouts or the Layout Editor in order to add or manage content on Playlists.  Any changes made to a Playlist will be updated in all Layouts/Schedules that already contain that Playlist.
+
+- Select **Playlists** under the **Library** section of the main CMS menu.
+
+
+- Click the **Add Playlist** button and complete the form fields:
+
+![Add Playlist](img/v4_media_playlists_add.png)
+
+[Folders](https://test.xibo.org.uk/manual/en/tour_folders.html) are used to organise, search and easily [Share](https://test.xibo.org.uk/manual/en/users_features_and_sharing.html#content-share) User objects with other Users/User Groups. Playlists saved to a Folder will inherit the access options applied to that Folder. 
 
 {tip}
-Playlists that are saved in Folders will inherit the View, Edit, Delete **Share** options that have been applied to the destination Folder for User/User Group access!
-
-If users should also have access to the content of the Playlist, ensure that this is also saved in the same Folder!
+If Users should also have access to the content of the Playlist (image/video media files for example), ensure that these are also saved to the same Folder!
 {/tip}
 
-- Click on the **Select Folder** button and expand to select a Folder to save in.
+- Give your Playlist a **Name** for easy identification in the CMS and include optional [Tags.](tour_tags.html) 
 
-- Users can also right click a folder to create a new folder to save in and access further options.
+There are two options for adding [Media](media_library) content to Playlists:
 
-- The selected folder file path will be shown next to the Folder field on the form.
+- Automatically assigning Library based media on criteria using the [Dynamic](media_playlists.html#content-dynamically-adding-media) option.
+- Manually assigning media using the [Playlist Editor](media_playlists.html#content-media-playlists), which will open on saving the form.
 
-  {tip}
-  Available options are based on enabled [Feature and Sharing](users_features_and_sharing.html) options for a User/User Group.
-  {/tip}
 
-{nonwhite}
-Further information for Administrators regarding Folder access and set-up can be found [here](https://xibo.org.uk/docs/setup/folders-administration)
-{/nonwhite}
+## Dynamically adding Media
 
-{white}
-For further information regarding Folder access and set-up, please speak to your Administrator.
-{/white}
+- Once ticked, click on the **Filter** tab and set the required criteria in order to populate matching Library Media. 
+- Provide a **maximum number** of Library Media files to limit the number that can be automatically assigned.
 
-- Provide a **Name** for easy identification purposes within the CMS.
+Media already in the CMS Library that matches the criteria set will be shown:
 
-- Include optional Tags to organise and make it easier to search for.
+![Dynamic Assignment](img/v4_media_playlists_dynamic.png)
 
-When entering text into the Tag field on the form, an auto complete helper will show possible matches to make it easier for Users to select from.
 
-Predefined  Values will be shown by using the **Tag value** drop down, if the Value is already known it can be typed directly into the field using the following format: `Colour|Red`
-If a Value has been set as 'Required' by an Administrator, then the Value must be entered in order to save the form!
-{/tip}
-
-Users can add an associated Value to a Tag that does not already have a predefined value by using the **Tag value** field. If a Tag value is not needed, this field can be left blank.
+Any future media files that are added to the Library that satisfy the set criteria for this Playlist will be automatically added to this list.
 
 {tip}
-Tags can also be assigned to multiple Layouts using the [With Selected](https://xibo.org.uk/manual/en/tour_grids.html#multi-select) option at the bottom of the Layout grid!
+Library Media can also be prepopulated as a one-time assignment to a Playlist by setting criteria but leaving the Dynamic option unticked!
 {/tip}
 
-For further information on what **Tag **and **Tag Values** to use, please speak with your Administrator.
-
-{nonwhite}
-Tag management information for Administrators can be found [here](https://xibo.org.uk/docs/setup/tags-adding-editing-assigning)
-{/nonwhite}
-
-### Automatic Media Assignment
-
-- Use the **Dynamic** check box if you want to automatically manage media assignments for this Playlist.
-- Once selected, click on the **Filter** tab to set the criteria to use to add Library Media and automatically maintain the Playlist. 
-
-![Playlist Filter Tab](img/v3.1_media_playlists_filter_tab.png)
+- Click to **Save**.
 
 {tip}
-Use the **Tag Filter** drop down to use And/Or criteria when selecting media to add!
+Did you know a Dynamic Playlist can be scheduled to be shown on Displays full screen without first adding it to a Layout? Use the row menu for the Playlist and select Schedule!
 {/tip}
 
-- Enter a number to set the **maximum** amount of Media items that can be dynamically assigned to the Playlist.
+## Playlist Editor
+
+- From the Toolbox, select content to add to the Playlist.
+- Configuration options will load in the properties panel.
+
+![Playlist Timeline](img/v4_media_playlists_timeline.png)
 
 {tip}
-You can also prepopulate a Playlist with media from the Library by leaving the Dynamic checkbox unticked and just using the Filter tab and criteria to add media as a one-time assignment.
+The **Playlist Editor** contains two additional Widgets, a **Rich Text Editor** to provide text, Html or JavaScript and a **Spacer** to create an empty 'slot' within a Playlist.
 {/tip}
 
-### Manually adding Media
+Durations will update to show the minutes/seconds as items are added to the Playlist timeline.
 
-- Complete the form fields and click the **Save** button:
+- Re-order the sequence by drag and drop.
 
-![Playlists Timeline](img/v3.1_media_playlists_timeline.png)
-
-- Use the Toolbar to add content to your Playlist using available [Widgets](layouts_widgets.html) and [Library Media](layouts_library_search.html) 
-- Add to the canvas by clicking to add or drag and drop.
-
-- Once added, configure using the available options:
+- Click the ruler icon to **Change Scale mode**:
 
 
-![Playlist Edit Widget](img/v3.1_media_playlists_edit_widget.png)
+![Scale Mode](img/v4_media_playlists_scale_mode.png)
+
+Use the scale options to zoom in and out to decrease/increase the visible time span.
+
+Items can be added to a specific point in the list, drag or click to add content to a position marker within the Playlist.
+
+![Add to Timeline](img/v4_media_playlists_add_timeline.png)
 
 {tip}
-For further information on the options available, refer to the relevant manual page for the chosen [Widget](media_modules.html).
+Use the Undo button at the bottom of the toolbar to revert a change.
 {/tip}
 
-Change the order of added media items in a Playlist by clicking on a Widget in the Timeline and dragging it to the desired positioning. As changes are autosaved, use the Undo button located at the of the toolbar to revert any changes if required.
-
-All Widgets/Library Media can access a **Context Menu** with a set of options that can be applied, such as **Share** access and **Transitions**. Right click a selected Widget/Media file to access. Further information regarding the Context Menu can be found on the [Layout Designer](layouts_designer.html) page of the manual.
+An additional [Context Menu](layouts_editor.html#content-context-menu) of options can be accessed by right clicking on an item which includes setting [Widget Expiry Dates](media_playlists.html#content-widget-expiry-dates) and [Playlist Transitions](tour_transitions.html#content-playlist-transitions).
 
 {tip}
-If you need to delete multiple Widgets on the Timeline, click the **Select Multiple Widgets** button on the bottom of the toolbar and then click on Widgets to highlight. Once you have made your selections click to delete with one click.
+When Transitions are applied to a Widget by default, the properties panel will be blank. Only manually entered Transitions will show on forms!
 {/tip}
 
-### Editing Playlists
 
-Playlists are edited independently to Layouts, so there is no need to access or edit the Layout(s) the Playlist has been added to.
+Use the **Select Multiple Widgets** button at the bottom of the Playlist Editor to delete multiple selections with one click: 
 
-- To edit content on the Playlist use the row menu from the Playlist grid and select Timeline to open the Playlist editor.
+![Mutli Select](img/v4_media_playlists_multi_select.png)
 
 {tip}
-Changes will be available in the system straight away ready to be picked up by Players on their next collection, with no need to make any edits to Layouts!
+Did you know a 'global' Playlist can be scheduled to be shown on Displays full screen without first adding it to a Layout? Use the row menu for the Playlist and select Schedule!
 {/tip}
 
-### Row Menu
+## Widget Expiry Dates
 
-Use the **Row Menu** to access further actions/shortcuts for the selected Playlist
+Items added to a Playlist have an additional option of setting Start and End times.
 
-### Sharing
+{feat}Widget Expiry Dates|v4{/feat}
 
-The creator (owner) of the Playlist or a Super Administrator can assign View/Edit/Delete access for other Users/User Groups.
+- Right click on an item in a Playlist to **Edit Expiry Dates** or set when [uploading media](media_library.html#content-add-media-upload) directly to a Playlist.
 
-Take a look at [Features and Sharing](users_features_and_sharing.html) for more information.
 
-### Add Playlists to Layouts
+Uploading from a [Library Search](layouts_editor.html#content-library-search) will have an additional **Set Expiry Date** option:
 
-Include the [Sub-Playlist Widget](media_module_subplaylist.html) to add Playlists to Layouts.
+![Expiry Dates](img/v4_media_playlists_upload_expiry.png)
+
+When uploading multiple media files, clicking the **Start upload** button will upload all files with the same date/time and Folder location set.
+
+{tip}
+Items can also be uploaded individually using the **blue upload** button at the end of the row for a file to have different set Expiry Dates and Folder locations for each file uploaded.
+{/tip}
+
+Any items on a Playlist that have **Expiry Dates** set show an icon, which when moused over will show further information:
+
+![Expiry Dates](img/v4_media_playlists_expiry_dates.png)
+
+
+
+{tip}
+Once the End date has passed the item will be removed from the Playlist. Expired items that have not been set to Delete on Expiry will remain visible in the Playlist Editor only so that Start and End times can be re-adjusted if needed.
+{/tip}
+
+- Click on an icon to open to make any changes/remove from the item.
+
+## Embedding Playlists
+
+Playlists can be added to other Playlist timelines in order to define how much content should be shown, for how long as well as determine a play order.
+
+- From the Playlist Editor select to add a New or select from the list of available 'global' Playlists from the Toolbox.
+- Options for configuration are shown in the Properties Panel:
+
+![Embedding Playlists](img/v4.1_media_playlists_embedding.png)
+
+- Use the dropdown menu to select **Playlists** using the `+` button to add and configure multiple Playlists if required.
+
+
+- **Spot** options are used to define how much content from Playlists should be shown and for how long.
+
+Spots also have an option to use a Playlists content as filler only and add content from this Playlist to **Fill** or **Pad** other selected Playlists:
+
+- This Playlist must be the **first** added Playlist in the list.
+- Enter a **0** in the **Spots** field so that the entire Playlist will be ignored and omitted from the play order. Select how the content from this Playlist should be distributed with the other Playlists using **Spot Fill** options.
+
+{version}
+**Note:** Please be aware that by setting **Start Dates** to Widgets may cause fewer Spots to be shown than the total amount specified!
+{/version}
+
+Use the drop-down menu for the **Spot Fill** field to select how any remaining Spots should be filled in the event that there are not enough Widgets on the selected Playlist to fulfil the specified play spots. 
+
+{tip}
+**Spots**, **Spot Length** and **Spot Fill** are all optional and can be left blank if this functionality is not required!
+{/tip}
+
+Use the drop-down for **Playlist Ordering** to select how all Playlists should be ordered to play.
+
+{tip}
+**Auto** uses the total count of items in each list and divides it by the smallest list to determine how often to take items from each list to ensure an even play from each Playlist.
+{/tip}
+
+Select from the **Remaining Widgets** options to handle any content that is left unordered at the end of a Playlist.
+
+{tip}
+Adding Playlists to a **New Playlist** on a Layout has an additional [Cycle Based Playback](layouts_editor_playlists.html#content-cycle-based-playback) option which includes a **Random Widget** feature.
+Cycle based playback is not supported when adding Playlists to a global Playlist!
+{/tip}
+
+## Playlist Grid
+
+Saved Playlists can be viewed from **Playlists** under the **Library** section of the main CMS menu:
+
+![Playlist Grid](img/v4.1_media_playlists_grid.png)
+
+Each Playlist has a row menu which is used to access a menu of actions/shortcuts, notable settings are listed below: 
+
+- **Timeline** - open the Playlist Editor to make changes to content on the timeline.
+- **Edit** - use the Filter tab for Dynamic Playlists to view the list of dynamically assigned media and make changes to criteria.
+- **Usage Report** - view where Playlists are being shown and what Layouts they have been included on.
+- **Schedule** - directly Schedule a Playlist to be shown full screen on Displays.
+
+{tip}
+Any changes made to a Scheduled Playlist will be automatically pushed to Players as they are made.
+{/tip}
 

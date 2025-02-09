@@ -1,109 +1,94 @@
-<!--toc=layouts-->
+---
+toc: "layouts"
+maxHeadingLevel: 3
+minHeadingLevel: 2
+excerpt: "Create a Layout List Campaign to ensure the play order of Layouts"
+keywords: "Layout list, group of Layouts, cycle based playback, round robin, block"
+persona: "content creator, super administrator, user, schedule manager"
+---
 
 # Campaigns
 
+[[PRODUCTNAME]] has two  **Campaign** types:
+
+- [Layout List](layouts_campaigns.html#content-create-a-layout-list) - a collection of Layouts in an ordered list.
+- [Ad Campaign](layouts_ad_campaigns.html) - allows for the creation of advertising campaigns ([Feature](users_features_and_sharing.html#content-features) enabled).
+
+## Create a Layout List
+
+A **Layout List Campaign** allows a User to set the playback of a group of Layouts in a defined order. 
+
+{nonwhite}{video}rMuYujq_LV8{/video}{/nonwhite}
+
 {tip}
-**Please note:** If you are using a CMS with a version earlier than v3.1.0, please click [here](layouts_campaigns_3.html)
+If you think of a Layout as a single slide in a presentation deck, a Campaign is the entire presentation!
 {/tip}
 
-Layouts can be grouped together into an ordered list to create Campaigns. A Campaign can then be **Scheduled** to play the grouped Layouts in a set sequence.
+Click on **Campaigns** under the **Design** section of the main CMS menu:
 
-**Campaigns** are administered from the **Design** section of the CMS Menu:
+![Campaigns](img/v4_layouts_campaigns_grid.png)
 
-![Campaigns](img/v3.1_layouts_campaigns_grid.png)
+- Click the **Add Campaign** button at the top of the grid.
 
-{tip}
-Take a look at the [Layouts](layouts.html) page to see how to first add and create Layouts that can then be grouped into Campaigns!
-{/tip}
+- Select **Layout List** from the drop down and complete the form fields:
 
-## Create a Campaign
 
-Click on the **Add Campaign** button at the top of the grid and complete the appropriate form fields:
+![Add Layout List Campaign](img/v4_layouts_campaign_add_layout_list.png)
 
-![Add Campaign](img/v3.1_layouts_campaign_add.png)
-
-### Folders
-
-Campaigns can be optionally saved to **Folders**.
-
-- Click on the **Select Folder** button and expand to select a Folder to save in.
-- Users can also right click a Folder to access further options.
-- The selected folder file path will be shown next to the Folder field on the form
+[Folders](tour_folders.html) are used to organise, search and easily [Share](users_features_and_sharing.html#content-share) User objects with other Users/User Groups. Campaigns saved to a Folder will inherit the access options applied to that Folder. 
 
 {tip}
-Campaigns that are saved in Folders will inherit the View, Edit, Delete **Share** options that have been applied to the destination Folder for User/User Group access. 
-
 If users should also have access to the Layouts/Layout content, ensure that this is also saved to the same Folder!
 {/tip}
 
-{tip}
-Options available to User/User Groups are based on enabled [Feature and Sharing](users_features_and_sharing.html) options!
-{/tip}
-
-{nonwhite}
-Further information for Administrators regarding Folder access and set-up can be found [here](https://xibo.org.uk/docs/setup/folders-administration)
-{/nonwhite}
-
-{white}
-For further information regarding Folder access and set-up, please speak to your Administrator.
-{/white}
-
-- Provide a **Name** for easy identification purposes within the CMS.
-
-
-- Include optional Tags to organise and make it easier to search for.
+- Give your Campaign a **Name** for easy identification in the CMS including optional [Tags](tour_tags.html).
 
 {tip}
-
-When entering text into the Tag field on the form, an auto complete helper will show possible matches to make it easier for Users to select from.
-
-Predefined  Values will be shown by using the **Tag value** drop down, if the Value is already known it can be typed directly into the field using the following format: `Colour|Red`
-If a Value has been set as 'Required' by an Administrator, then the Value must be entered in order to save the form!
+Tags and Folders can also be assigned to multiple Campaigns using the [With Selected](tour_cms_navigation.html#content-multi-select---with-selected) option at the bottom of the Campaign grid!
 {/tip}
 
-Users can add an associated Value to a Tag that does not already have a predefined value by using the **Tag value** field. If a Tag value is not needed, this field can be left blank.
+### Cycle Based Playback
 
-{tip}
-Tags can also be assigned to multiple Campaigns using the [With Selected](https://xibo.org.uk/manual/en/tour_grids.html#multi-select) option at the bottom of the Campaign grid!
-{/tip}
+When a **Campaign** is scheduled with **Cycle Based Playback** enabled, 1 Layout will be shown for a set Play Count. The same Layout will be shown each Schedule loop until the Play Count has been achieved.
 
-For further information on what **Tag **and **Tag Values** to use, please speak with your Administrator.
+{feat}Campaign Cycle Playback|v4{/feat}
 
-{nonwhite}
-Tag management information for Administrators can be found [here](https://xibo.org.uk/docs/setup/tags-adding-editing-assigning)
-{/nonwhite}
+Once enabled, provide a **Play Count** to determine how many 'plays' a Layout should have before moving onto the next Layout in the Campaign.
 
--  From v3.1.0 tick to enable **cycle based playback** for this Campaign.
-- Provide a **Play Count** to determine how many 'plays' a Layout should have before moving onto the next Layout in the Campaign.
+### List Play Order
 
-When you schedule a Campaign with cycle playback enabled, each time the scheduled event appears only 1 Layout will be shown for the set count from the Campaign.
+For Campaigns that do not have Cycle Based Playback enabled, **List Play Order** options can be used to determine how Layouts assigned to the Campaign will play when scheduled at the same time as another Campaign with the same Display Order:
 
-{tip}
-**Please note:** Cycle based playback is available from Windows v3 R302. 
-We are currently working to support this on other Players.
-{/tip}
+**Round Robin** - Layouts from each Campaign will play interleaved.
 
+**Block** - Layouts will play in their entirety from a Campaign before moving onto the next Campaign.
 
+## Add Layouts to a Campaign
 
-## Assigning Layouts to a Campaign
+On **Saving**, the form will re-open with additional tabs.
 
-- Layouts are assigned using the plus icon. Once pressed Layouts will show in the staging area. 
+Use the **Layouts** tab to select which Layouts to add:
 
+![Assign Layouts](img/v4_campaigns_assign_layouts.png)
 
-![Assign Layouts](img/v3.1_campaigns_assign_layouts.png)
+- Using the `+` icon to select which **Layouts** to add.
 
-- Layouts can be removed by clicking on the minus icon next to a Layout in the staging area.
-- Re-order Layouts in the staging area by drag and drop to ensure that Layouts play in your designed sequence.
+- Selected Layouts will be added to the 'staging area' at the top of the form.
+- Layouts can be **re-ordered** from here by drag and drop.
+- Remove a Layout by clicking the  `-` icon.
 - Click **Save** to keep changes.
 
 {tip}
-Use the **Copy** button located on the row menu to easily make a copy of an existing Campaign as well as enabling [Share](users_features_and_sharing.html) options for selected Users/User Groups!
+The Reference tab can be used to provide reference information for the selected Campaign. Once added, this information can be viewed in the Campaign grid and via the API.
 {/tip}
 
-{tip}
-Layouts can be directly assigned to Campaigns from the Layouts grid. Use the row menu for the Layout to add and click **Assign to Campaign**. Layouts will be assigned to the end of the selected Campaign by default!
-{/tip}
+Use the row menu from the Campaign grid to easily make copies of a Campaign as well as enable [Share](users_features_and_sharing.html#content-share) options for selected Users/User Groups.
 
 {tip}
-Did you know that using **Display Order** when [Scheduling Events](scheduling_events.html) you can further control how your Campaigns will play on your Displays.
+Layouts can be directly assigned to Campaigns from the [Layouts](layouts.html#content-layout-grid) grid. Use the row menu for the Layout to add and click **Assign to Campaign**. Layouts will be assigned to the end of the selected Campaign by default!
 {/tip}
+
+
+
+
+

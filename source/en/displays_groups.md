@@ -1,131 +1,78 @@
-<!--toc=displays-->
+---
+toc: "displays"
+maxHeadingLevel: 3
+minHeadingLevel: 2
+excerpt: "Create Display Groups for ease of scheduling and media assignment"
+keywords: "dynamic group membership, add display group, "
+persona: "display manager, administrator"
+---
 
 # Display Groups
 
-{tip}
-If you are using a CMS earlier than v3.0.0 please use the following link: [Display Groups](displays_groups_2.html)
-{/tip}
+Create Display Groups to group together specific [Displays](displays.html) for easier Scheduling and management as your [[PRODUCTNAME]] system grows.
 
-For ease of **Scheduling** and **Media Assignment** create Display Groups and assign Displays to one or multiple Display Groups. 
+Display Groups can contain both singular **Displays** as well as other **Display Groups**. This allows you to target large numbers of Displays with just a simple [Schedule](scheduling_events.html)
 
-Display Groups are administered in the CMS by clicking on **Display Settings** under the **Displays** section from the main menu. The Display Group grid will open to Add new and manage existing Display Groups.
+## Display Group Administration
 
-![Display Groups Grid](img/v3_displays_groups_grid.png)
+Display Groups are managed in the CMS by clicking **Display Groups** under the Displays section of the main CMS menu:
 
-The **Folder** tree will open by default:
+![Display Groups Grid](img/v4_displays_groups_grid.png)
 
-- Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.
+Use the **Add Display Group** button to create a new Display Group and complete the required form fields:
 
-or
+![Add Display Group](img/v4_displays_groups_add.png)
 
-- Tick **All Folders** to include searching in the Root Folder and return results based on any filters applied to the grid.
+Display Groups can be saved to [Folders](/manual/en/tour_folders.html) to easily control User/User User Group levels of interaction for Display Groups as well as provide an additional way to organise.
 
 {tip}
-Click the Folders icon to toggle on/off from view.  When Folders are hidden from view, the file path for the selected folder will be shown!
+Display Groups that are saved in Folders will inherit the View, Edit, Delete [Share](users_features_and_sharing.html#content-share) options that been applied to the destination Folder for the User/User Group!
 {/tip}
 
-{tip}
-Logged in Users will only view the status of Displays that they have been given access to!
-{/tip}
+Displays need to be assigned to the Display Group in one of two ways, by manually adding or it can be controlled with filter criteria as a Dynamic Group.
 
-## Add/Edit 
+### Dynamic Group Membership
 
-Click on the **Add Display Group** button to create a new Display Group or use the Row Menu to **Edit** an existing Display Group.
+To assign members to this group dynamically:
 
-![Add Display Group](img/v3_displays_groups_add.png)
+- Tick the Dynamic Group checkbox on the form to reveal additional form fields.
+- Filter criteria for Dynamic Groups is in the format of regular expressions, but can also be simple string comparisons. The expressions should be separated by a comma and can be negated with a `-` prefix.
 
-### Folders
-
-Display Groups can be optionally saved to Folders.
-
-{tip}
-Display Groups that are saved in Folders will inherit the View, Edit, Delete Share options that been applied to the destination Folder for the User/User Group!
-{/tip}
-
-- Click on the Select Folder button and expand to select the Folder to save in/move to.
-
-![Select Folder](img/v3_display_groups_select_folder.png)
-
-- Users can also right click a folder to create a new folder to save in and access further options.
-
-{tip}
-Available options are based on enabled [Feature and Sharing](users_features_and_sharing.html) options for a User/User Group!
-{/tip}
-
-{nonwhite}
-Further information for Administrators regarding Folder access and set-up can be found [here](https://xibo.org.uk/docs/setup/folders-administration)
-{/nonwhite}
-
-{white}
-For further information regarding Folder access and set-up, please speak to your Administrator.
-{/white}
-
-{tip}
-Assign multiple Display Groups to a Folder using the With Selected option at the bottom of the grid!
-{/tip}
-
-### Tags
-
-Display Groups can be optionally tagged.  When entering text into the Tag field, an auto complete helper will show possible matches to make it easier for Users to select Tags already added in the system.
-
-If Tags require a predefined value, these will be shown in the Tag value drop down menu, or of already known can  be directly typed into the field.
-
-{tip}
-If a Value has been set as 'Required' by an Administrator, then the Value must be entered in order to save the form!
-{/tip}
-
-Users can add an associated Value to a Tag that does not already have a predefined value by using the **Tag value** field. If a Tag value is not needed, this field can be left blank.
-
-{tip}
-Tags can also be assigned to multiple Display Groups using the [With Selected](https://xibo.org.uk/manual/en/tour_grids.html#multi-select) option at the bottom of the Display grid!
-{/tip}
-
-For further information on what **Tag **and **Tag Values** to use, please speak with your Administrator.
-
-{nonwhite}
-Tag management information for Administrators can be found [here](https://xibo.org.uk/docs/setup/tags-adding-editing-assigning)
-{/nonwhite}
-
-## Members
-
-The membership of a Display Group is either a **Manual Assignment** or controlled by filter criteria using **Dynamic Groups**. 
-
-### Dynamic Groups
-
-When ticked an additional field will appear to allow for entry of one or more regular expressions to use to select which Displays belong to that Display Group.
-
-Filter criteria for Dynamic Groups is in the format of regular expressions, but can also be simple string comparisons. The expressions should be separated by a comma and can be negated with a `-` prefix.
 {tip}
 For example, all Displays containing "a" but not "b" would be `a,-b`.
 {/tip}
 
-
-
-![Display Group Dynamic Criteria](img/v3_displays_group_dynamic.png)
+![Display Group Dynamic Criteria](img/v4_displays_group_dynamic.png)
 
 {tip}
-From v3.1.0 Criteria Tags can be filtered using addtional OR/AND filters for Displays that have multiple Tags assigned!
+Criteria Tags can be filtered using additional OR/AND filters for Displays that have multiple Tags assigned!
 {/tip}
 
-
-
-### Manual Assignment
-
-After completing and saving the **Add Display Group** form,  assign Displays using the Row Menu and selecting **Members**.
-
-Control membership using the **Member** checkbox for selected Displays/Display Groups.
-
-![Display Group Memberships](img/displays_groups_memberships.png)
+- Click to **Save** 
 
 {tip}
-Use the **Relationship Tree** tab to view the ancestors and descendants of the Display Group being edited.
+If you have more Display Groups to create instead of hitting Save click **Next** to keep the form open and continue creating new Display Groups!
 {/tip}
 
+### Manual Group Membership
 
+To manually assign members to this group:
+
+- Leave the Dynamic Group checkbox unticked and click to **Save** the form.
+- Use the row menu for the new Display Group record and select **Members**.
+- Use the checkbox for each Display to control the membership to the group.
+
+![Display Group Memberships](img/v4_displays_groups_memberships.png)
+
+{tip}
+Use the **Relationship Tree** tab to view the ancestors and descendants of the Display Group being edited. The current Display Group will be in bold text. Parent Display Groups (above the current one) will pass their schedule down to the current and child Display Groups. Child Display Groups (below the current one) will inherit schedule information from the Parent Display Group and the current Display Group.
+{/tip}
+
+- click to **Save**.
 
 ## Nested Groups
 
-Display Groups can be nested to create complex structures and allow for targeted Scheduling.
+Display Groups can be nested to create complex structures and targeted Scheduling.
 
 {tip}
 Example Group Structure
@@ -140,5 +87,21 @@ The Display membership is set on the lowest level groups and those groups then b
 The CMS will not allow a circular reference to be created (an assignment that creates a loop i.e. Site 1 has Site 1 - Building A, and Site 1 - Building A has Site 1.)
 {/tip}
 
-**Schedules**, **Media file** and **Layout Assignments** set to the Display Group, will apply to all members within the group.
+**Schedules**, **Media files** and **Layout Assignments** set to the Display Group, will apply to all members assigned to the group.
+
+## Row Menu
+
+Each Display Group has a row menu containing a number of actions/shortcuts.
+
+- Click on **Members** to manage the membership of Display Groups which have had Displays manually assigned.
+- Use **Edit** to view the criteria used for dynamic memberships and to make changes if required.
+- Directly [Assign Library files and Layouts](displays.html#content-assign-files--layouts) to a Display Group so that they are always available in the local library of the Player.
+
+{tip}
+Use the **With Selected** option at the bottom of the grid to easily perform bulk actions for multiple Display Groups!
+{/tip}
+
+#### Next...
+
+[Display Sync Groups](displays_sync_groups.html)
 

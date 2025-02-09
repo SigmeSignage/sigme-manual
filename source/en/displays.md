@@ -1,67 +1,64 @@
-<!--toc=displays-->
+---
+toc: "displays"
+maxHeadingLevel: 3
+minHeadingLevel: 2
+alias: "displays_fileassociations"
+excerpt: "Configure and Manage Displays in your CMS"
+keywords: "authorise, display code, authentication code, default layout, transfer display, map display view, file assignments, layout assignments, assign"
+persona: "display manager, administrator"
+---
 
 # Displays
 
-{tip}
-If you are using a CMS earlier than v3.0.0 please use the following link: [Displays](displays_2.html)
-{/tip}
-
 The primary purpose of [[PRODUCTNAME]] is to show content on screens with the entire application suite existing for that one purpose. [[PRODUCTNAME]] provides a concept called **Displays** to manage when and how content is shown on a screen.
 
-{tip}
-When no other content is Scheduled, of if there is an issue that prevents the scheduled Event from showing, we highly recommend that a **Default Layout** is set so that something is **always** shown on Displays! You can create your own Default Layout to replace the existing one, but keep in mind that designs should be kept simple with no complex media or web content.  Edit a Display to select or use the Row Menu and click on Default Layout to select your designed Layout from the dropdown menu.
-
-**Please note**: If no Default Layout is set or there is an issue with the Default Layout that has been set, the splash screen will be shown on Displays!
-
-{/tip}
-
-Displays are uniquely identified by a **hardware key** which is generated when the Signage Player software is installed. This hardware key is used to create a Display record in the CMS and is unique to that one Display record.
-
 {nonwhite}
-Administrator documentation for Player Installation guides can be found [here](https://xibo.org.uk/docs/setup/xibo-player-installation)
+Administrator documentation for Player Installation can be found in our [Administration Manual](/docs/setup/). Select your chosen Player to follow the **Installation** instructions and required steps to **Connect to your CMS**.
 {/nonwhite}
 
-## Connecting a Display
-
-Displays connect to the CMS over an API called "XMDS" {nonwhite}(Xibo Media Distribution Service){/nonwhite} with most Players only requiring the URL and CMS Key. 
-
-Alternatively, Displays can be added by providing a 6 character ‘Activation Code’ in the **Displays** page of the CMS.
-
-**Please note:** Using the **Add Display (Code)** in the CMS to connect a Display is currently only supported for **Android Players** from v2 R204 and **Windows Players** (from v2 R202/R252). We are working on supporting this connection method for all Players.
-
 {tip}
-New Displays will need to be marked as **Authorised** before they can be sent any content. This can be done by using the Row Menu for the Display and clicking the **Authorise** action.
+Ensure that any new Displays have been marked as **Authorised** in the CMS so that they can start receiving content. Use the Display row menu and select **Authorise**.
 {/tip}
 
 ## Display Administration
 
-Displays are administered in the CMS from clicking on **Displays** under the **Administration** section of the main menu.  The Displays [Grid](tour_grids.html) will open for you to add new and manage exiting Displays.
+Displays are managed in the CMS by clicking **Displays** under the **Displays** section of the main CMS menu. Displays are uniquely identified by a **hardware key** which is generated when the Player software is installed. This hardware key is used to create a unique Display record in the CMS.
 
-![Display Administration Grid](img\v3_displays_administration_grid.png)
+![Display Administration Grid](img/v4_displays_administration_grid.png)
 
-The **Folder** tree will open by default:
+{tip}
+The Add Display (Code) function can be used after installing the Player in order to easily Connect Players to the CMS.  Players will show a 6 character Activation Code to enter in the form in order to Connect.
+{/tip}
 
-- Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.
+{feat}Connect using Authentication Code|v4{/feat}
 
-or
+Displays can be saved to [Folders](/manual/en/tour_folders.html) to easily control User/User User Group levels of interaction for Displays as well as provide an additional way to organise.
 
-- Tick **All Folders** to include searching in the Root Folder and return results based on any filters applied to the grid.
+{tip}
+Displays that are saved in Folders will inherit the View, Edit, Delete [Share](users_features_and_sharing.html#content-share) options that been applied to the destination Folder for the User/User Group!
+
+Assign multiple Displays to a Folder using the **With Selected** option at the bottom of the grid!
+{/tip}
+
+The grid will update to show only objects inside a Folder once selected or use **All Folders** to include searching in the Root Folder.
 
 {tip}
 Click the Folders icon to toggle on/off from view.  When Folders are hidden from view, the file path for the selected folder will be shown!
 {/tip}
 
-{tip}
-Logged in Users will only view the status of Displays that they have been given access to!
-{/tip}
+Use the Column visibility button to select from the available options to show the information you need for your administration purposes. 
 
-**ID** - Used for internal identification of the Display only.
+Some of the notable options are listed below:
 
-**Display** - Name given to the Display for easy identification purposes within the CMS (this is not shown on the Display itself).
+**ID** - Internal identification of a Display.
 
-**Status** -  *Tick* = Player is up to date (this may also show as green in colour).
-				*Cloud Icon* =  Player has not logged in with content waiting to be downloaded (this may also show as amber in colour, as above)
-				*Cross* = Player is currently downloading new content and has yet to complete the download (this may also show as red in colour)	
+**Display** - Friendly name given to the Display for easy identification purposes within the CMS (this is not shown on the Display itself).
+
+**Status**:
+
+- *Tick* = Player is up to date (this may also show as green in colour).
+- *Cloud Icon* =  Player has not logged in with content waiting to be downloaded (this may also show as amber in colour, as above)
+- *Cross* = Player is currently downloading new content and has yet to complete the download (this may also show as red in colour)	
 
 **Authorised** - Tick or cross to indicate whether the Display has been granted a licence with the CMS. This prevents unauthorised Displays being added to the CMS.
 
@@ -75,31 +72,19 @@ Include the **Commercial License** column using the **Column Visibility** button
 
 **MAC Address** - Media Access Control Address of the Display (if the Player software is capable of sending it).
 
-{tip}
-Use the **Column visibility** button to select from the available options to show the information you would like to display for your administration purposes. Deselect to remove a column from the Displays grid!
-{/tip}
-
 ## Row Menu
 
-Each Display has a Row Menu containing a number of actions that can be performed:
-
-
-
-![Displays Row Menu](img\v3_displays_row_menu.png)
+Each Display has a row menu containing a number of actions/shortcuts.
 
 {tip}
-Selected actions allow for [Forms](tour_forms.html) to be automatically submitted by clicking on the action from the Row Menu, such as **Authorise** and **Check Licence**. Actions that have an auto submit capability will display an option to enable. Take a look at [Grids](tour_grids.html) for further information!
+Selected actions allow for certain [Forms to be automatically submitted](tour_cms_navigation.html#content-automatic-submission-of-forms) such as **Authorise** and **Check Licence**. Actions that have an auto submit capability will display an option to enable. 
 {/tip}
-
-
 
 ### Manage
 
 Each Display has its own **Dashboard** which shows the Displays current status, bandwidth usage, file status and errors.
 
-![Manage Dashboard](img\v3_displays_manage_dashboard.png)
-
-
+![Manage Dashboard](img/v4_displays_manage_dashboard.png)
 
 {tip}
 This Dashboard is useful as a first step to look at when troubleshooting issues with a Display!
@@ -107,139 +92,144 @@ This Dashboard is useful as a first step to look at when troubleshooting issues 
 
 ### Edit
 
-Clicking on **Edit** opens the Edit Display form which contains tabs with configuration options.
+Click **Edit** to manage configuration options for the Display:
 
-![Edit Form](img/v3_displays_edit_form.png)
+![Edit Form](img/v4_displays_edit_form.png)
+
+- Use the **General** tab to view the unique **Display Hardware Key** which is generated during installation, **Authorise a Display** to use an available Licence Pool slot and set a **Default Layout**.
+
+
+- Provide Display **Details** such as the **Latitude** and **Longitude** of the Display. If you are using the [Ad Campaign](layouts_campaigns.html#content-ad-campaigns) functionality ensure that you complete the **Cost per play** and **Impressions per play** fields on this tab for all selected Displays.
 
 {tip}
-The unique hardware key that is generated during installation is shown on the General tab for the selected Display!
+Additional fields have been included designed to enhance advertising needs such as:
+
+- The physical address of the display
+- Is the display mobile?
+- Venue type
+- Languages supported
+
 {/tip}
 
-### Folders
+- Optionally provide **Reference** information for the selected Display. Once added, this information can be viewed in the Display grid and via the API.
 
-Displays can be optionally saved to **Folders** using the **Edit form** or from the **Select Folder** option on the Row Menu.
+- Control **Email Alerts** and **Global Timeout** settings from the **Maintenance** tab.
+
+
+- Override [Display Profile Settings](displays_settings.html) for individual Displays using the **Settings** tab.
+
+
+![Displays Edit Profile Settings](img/v4_displays_edit_profilesettings.png)
+
+- Use the **Advanced** tab to apply limits to determine the amount of **Bandwidth** a Display can consume and to **Clear Cached Data**.
+
 
 {tip}
-Displays that are saved in Folders will inherit the View, Edit, Delete Share options that been applied to the destination Folder for the User/User Group!
-{/tip}
-
-- Click on the **Select Folder** button and expand to select a Folder to save in.
-
-![Folder Tree](img/v3_displays_folders.png)
-
-- Users can also right click a Folder to access further options.
-
-{tip}
-Available options are based on enabled [Feature and Sharing](users_features_and_sharing.html) options for a User/User Group!
-{/tip}
-
-{nonwhite}
-Further information for Administrators regarding Folder access and set-up can be found [here](https://xibo.org.uk/docs/setup/folders-administration)
-{/nonwhite}
-
-{white}
-For further information regarding Folder access and set-up, please speak to your Administrator.
-{/white}
-
-{tip}
-Assign multiple Displays to a Folder using the With Selected option at the bottom of the grid!
-{/tip}
-
-The selected folder file path will be shown next to the Folder field on the form
-
-### Tags
-
-Displays can be tagged for organisation and to make it easier to find a large number of Displays all grouped by Tags.  When entering text into the Tag field on the form, an auto complete helper will show possible matches to make it easier for Users to select from.
-
-Predefined  Values will be shown by using the **Tag value** drop down, if the Value is already known it can be typed directly into the field using the following format: `Colour|Red`
-
-{tip}
-If a Value has been set as 'Required' by an Administrator, then the Value must be entered in order to save the form!
-{/tip}
-
-Users can add an associated Value to a Tag that does not already have a predefined value by using the **Tag value** field. If a Tag value is not needed, this field can be left blank.
-
-{tip}
-Tags can also be assigned to multiple Displays using the [With Selected](https://xibo.org.uk/manual/en/tour_grids.html#multi-select) option at the bottom of the grid!
-{/tip}
-
-For further information on what **Tag **and **Tag Values** to use, please speak with your Administrator.
-
-{nonwhite}
-Tag management information for Administrators can be found [here](https://xibo.org.uk/docs/setup/tags-adding-editing-assigning)
-{/nonwhite}
-
-
-
-#### Override Display Profile Settings for individual Displays
-
-Use the **Profile Settings** tab to see the settings applied from the selected [Display Settings Profile](displays_settings.html).
-
-![Displays Edit Profile Settings](img\displays_edit_profilesettings.png)
-
-Click the edit icon to change selected settings to override the Profile.
-
-#### Set Bandwidth Limits per Display
-
-Use the **Advanced** tab to apply a limit to determine the amount of bandwidth that a **Display** can consume.
-
-![Displays Bandwidth](img\v3_displays_edit_advanced_bandwidth.png)
-
-{tip}
-Set bandwidth limits for multiple Displays using the With Selected option at the bottom of the grid!
+You can easily set bandwidth limits for multiple Displays using the **With Selected** option at the bottom of the Displays grid!
 {/tip}
 
 ### Delete
 
-Deleting a **Display** will remove it from the **CMS** entirely - this operation cannot be reversed. A deleted Display can be reconnected to the CMS by repeating the “Register” procedure which will create a new unique Display record.
+Deleting a **Display** will remove it from the **CMS** entirely - this operation cannot be reversed. A deleted Display can be reconnected to the CMS by repeating the **Connect to CMS** procedure which will create a new unique Display record.
 
 {tip}
-**Deauthorise** a Display instead of deleting so that it can be re-authorised at a later date if needed. Use the row menu for the Display and click on **Authorise** to toggle to **Deauthorise**. This can also be actioned from the **Edit Display** form by selecting **No** for Authorise display.
+**Deauthorise** a Display instead of deleting so that it can be re-authorised at a later date if needed. Use the row menu for the Display and click on **Authorise** to toggle to **Deauthorise**. 
+
+This can also be actioned from the **Edit** form on the General tab by selecting **No** for Authorise display.
+{/tip}
+
+### Default Layout
+
+When no content is scheduled or if there is an issue that prevents a scheduled Event from showing, a **Default Layout** will be shown on Displays to ensure that something is **always** shown! 
+
+Displays will show the global Default Layout as set in [CMS Settings](tour_cms_settings#content-default-layout) which can be overridden per Display if required:
+
+- Select from the row menu or **Edit** form to choose the Layout to use from the dropdown menu. 
+- Leave this field blank to automatically use the global Default Layout.
+
+{tip}
+Create your own Layout to select but keep in mind that designs should be kept simple with no complex media or web content.
+{/tip}
+
+{version}
+**NOTE:** If there is no other content scheduled and the Default Layout is being downloaded/there is an issue with the selected Default Layout, the splash screen will be displayed.
+{/version}
+
+### Assign Files / Layouts
+
+[Library files](media_library.html) and [Layouts](layouts.html) can be assigned directly to a Display so that they are always available in the local library of the Player. This is useful for pre-loading a Layout ahead of time when that Layout will be used for some API integration, triggering a change for example.
+
+- Select which files/Layouts to assign and click to **Save**.
+
+Selected files/Layouts will be downloaded to the Display at the next collection interval. If XMR is installed these will be downloaded immediately.
+
+However, this does NOT mean that Library files and Layouts will be shown and will still need to be [Scheduled](scheduling_events.html).
+
+{tip}
+Files/Layouts can be unassigned from Displays by following the same steps and deselecting items from the top staging area. These will be 'cleaned up' when the Player needs space or after 30 days of the that file/Layout no longer being required.
 {/tip}
 
 ### Send Command
 
 The **Send Command** functionality is executed via XMR to Players by selecting a predefined command. This is useful for sending Players 'Reboot' commands for example.
 
-![Displays Send Command](img\displays_send_command.png)
-
-
-
 {tip}
-Administrators create predefined commands for use, therefore if you require additional commands, please contact your Administrator.
-{/tip}
-
-{nonwhite}
-Administrator information on the Command Functionality can be found [here](https://xibo.org.uk/docs/setup/command-functionality)
-{/nonwhite}
-
-{tip}
-This type of Command can also be executed by scheduling a [Command Event](scheduling.html#Events)
+This type of [Command](displays_command_functionality.html) can also be executed by scheduling a [Command Event](scheduling_events.html#content-command)
 {/tip}
 
 ### Transfer Display to another CMS
 
-**Please note:** This feature is currently not supported on Tizen and Linux Players. We are currently working to bring this feature to all Players but at present this feature is only available for Windows Players from v2 R201, Android Players from v2 R203 and webOS from R204.  
+{feat}Transfer Display to another CMS|v4{/feat}
+To use this functionality you will first need to activate Google Authenticator using [Two factor Authentication](tour_user_access.html#content-two-factor-authentication), if you have not already set this up.
 
-To use this functionality you will first need to activate Google Authenticator using [Two factor Authentication](https://xibo.org.uk/manual/en/tour_two_factor_authentication.html), if you have not already set this up.
+Once activated, use the row menu for the Display you want to transfer, and select **Transfer to another CMS**
 
-![Display Transfer Google Authenticator](img\displays_transfer_cms_google_authenticator.png)
+Ensure all the form fields are completed as explained below:
 
-Once activated, click on **Displays** from the CMS main menu and use the Row Menu to click on  **Transfer to another CMS** for the selected Display you want to transfer.
+- Enter the full **CMS URL** you wish to transfer this Display to.
 
-Ensure all the form fields are completed by:
+- Provide the **CMS Secret Key** for the CMS Address you wish to transfer to.
 
-- Entering the full **CMS URL** you wish to transfer this Display to.
-- Providing the **CMS Secret Key** for the CMS Address you wish to transfer to.
-- Complete the **Two Factor authentication code**, as displayed on the app.![Transfer CMS](img\displays_move_cms.png)
+- Complete the **Two Factor authentication code**, as displayed on the app.
 
-Once the details provided have been authenticated, the Display will attempt registration with the 'new' CMS. Once the Display has been successfully transferred the Display will stop communicating with the 'old' CMS and will change from a 'tick' to a `X` in the **Authorised** column.
+  ![Transfer CMS](img/v4_displays_move_cms.png)
+
+Once the details provided have been authenticated, the Display will attempt registration with the 'new' CMS. Once the Display has been successfully transferred the Display will stop communicating with the 'old' CMS and will change from a 'tick' to a `X` in the **Authorised** column in the Displays grid.
 
 {tip}
 Select multiple Displays to transfer using the **With Selected** option at the bottom of the grid!
 {/tip}
 
+## Map View
+
+Use the Map view to see the locations and status of Displays.
+
+Click the icon located next to the Folders toggle to switch to the **Map View**:
+
+![Display Map View](img/v4_displays_administration_map_view.png)
+
+The status of Displays in marker clusters will be shown as pie charts for easier identification:
+
+![Status Marker Clusters](img/v4_displays_status_marker_cluster_chart.png)
+
 {tip}
-Certain Actions from the Row Menu have the option to be 'automatically submitted', see [Grids](tour_grids.html) for further information!
+Logged in Users will only be able to view the status of Displays they have been given access to. 
+Use the filter fields in the grid from the List View to isolate Displays to view!
 {/tip}
+
+Clicking on a status icon will show further information about the selected Display:
+
+![Display Map View Status](img/v4_displays_administration_display_map_status.png)
+
+Click the icon - **List** to return to the Display grid view.
+
+#### Next...
+
+[Display Groups](displays_groups.html)
+
+
+
+
+
+
 

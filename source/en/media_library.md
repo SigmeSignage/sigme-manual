@@ -1,89 +1,87 @@
-<!--toc=media-->
+---
+toc: "media"
+maxHeadingLevel: 3
+minHeadingLevel: 2
+aliases:
+  - "media"
+  - "media_tidylibrary"
+  - "media_resizing_images"
+excerpt: "Manage file based media from the CMS Library"
+keywords: "upload library media, add media via url, media library expiry dates, Retire media, enable media stats collection, update media, replace media, usage report, tidy library, purge list, schedule"
+persona: "media manager, content manager"
+---
 
-# Library 
+# Media Library 
+
+[[PRODUCTNAME]] supports a wide variety of media types, from Widgets which are created and stored directly on Layouts and Playlists to file-based media that is uploaded and stored in the CMS Library which can then be reused across multiple Layouts and Playlists.
+
+{version}
+**NOTE:** [[PRODUCTNAME]] takes no measures to control what content is put on your Displays. It is your responsibility to ensure that your content is appropriate material for your desired audience. Content must be appropriately attributed if you do not own the rights to it.
+{/version}
+
+Manage all file based media by selecting **Media** under the **Library** section of the main CMS menu:
+
+![Media Library](img/v4_media_library_grid.png)
+
+Use the multiple filter fields across the top of the [grid](tour_cms_navigation.html#content-grids) to restrict criteria for returned results.
 
 {tip}
+Use the **OR/AND** option for **Names** and to filter items that have been assigned multiple **Tags**.
 
-**Please note:**
+Images and Videos that have a set thumbnail can also be filtered by **Orientation** once set:
 
-- If you are using a v3.0.x CMS, please click [here](media_library_3.html)
+- Use the row menu for the item and select **Edit** for an Image/Video file.  
 
-- If you are using a CMS version earlier than v3.0.0 please click [here](media_library_2.html)
-  {/tip}
+- Scroll down to the bottom of the form and set the intended **Orientation**.
 
-The CMS Library stores all file-based media that is uploaded for use on Layouts. 
-
-{tip}
-Pixabay images and videos that are selected to be used on Layouts/Playlists are also added to the Library!
 {/tip}
 
-Library media is managed from **Media** under the **Library section** of the main menu:
+ [Folders](tour_folders.html) are used to organise, search and easily [Share](users_features_and_sharing.html) User objects with other Users/User Groups.
 
-![Media Library](img/v3.1_media_library_grid.png)
-
-
-Use the availalble filters to easily narrow down searches.
-
-{tip}
-Use the **AND** option to filter items that have been assigned multiple **Tags**!
-{/tip}
-
-{tip}
-Images and Videos that have a set thumbnail can also be filtered by Orentation. Set by using the row menu and select **Edit** for an Image/Video file.  Scroll down to the bottom of the form and set the intended **Orientation**.
-{/tip}
-
-Use the **Folder Search** option to view media saved to folders:
-
-- Click on a Folder/ sub-folder to search the contents and return results based on any filters applied to the Grid.
+- Click on a Folder/sub-folder to search the contents of only the selected Folder and return results based on any filters applied.
 
 or
 
-- Tick **All Folders** to include searching in the Root Folder and return results based on any filters applied to the Grid.
-
-
-Folders allow users to organise, search and share objects easily.  Further information can be found on the [Grids page](tour_grids.html)
-{nonwhite}
-Further information for Administrators regarding folder setup can be found [here](https://xibo.org.uk/docs/setup/folders-administration).
-{/nonwhite}
-
-## Adding Media
-
-Library media can be either uploaded directly using the **Add Media** button and uploading or by providing a URL using the **Add Media (URL)** button.
+- Tick **All Folders** to include searching in the Root Folder and return results based on any filters applied.
 
 {tip}
-Upload to the library to have media ready for use to be selected using [Library Search](layouts_library_search.html) options!
+Click the Folders menu to toggle on/off from view.  When the Folder tree is hidden from view, the file path for the selected folder will be shown!
 {/tip}
 
-### Upload
+## Adding Library Media
 
-- Select the **Add Media** button at the top of the grid:
+Library media can be either uploaded directly using the **Add Media** button or by providing a URL using the **Add Media (URL)** button.
 
-  ![Upload Media](img/v3.1_media_library_upload.png)
+{tip}
+Add Media to the CMS Library and save to [Folders](tour_folders.html) to have media ready for use for the appropriate [Users](users_administration.html)/[User Groups](users_groups.html)! 
+
+Files added to the CMS Library can be easily added to Layouts and Playlists using a [Library Search](layouts_editor.html#content-library-search)
+{/tip}
+
+### Add Media (Upload)
+
+- Select the **Add Media** button
+
+  ![Upload Media](img/v4_media_library_upload.png)
 
 - Click **Add files** and select the file(s) you wish to upload. 
 
 {tip}
-Files can also be added via drag and drop!
+Default thresholds and limits can be specified which are then considered in the event an [Image](media_module_image.html) should be resized when uploading an image for example. Further information can be found in [CMS Settings](tour_cms_settings.html#content-resizing-images).
 {/tip}
 
-- Give your file a **Name** for easier identification in the CMS and an optional **Tag**. 
+- Give your file a **Name** for easier identification in the CMS and optional [Tags](tour_tags.html). 
 
 {tip}
 If the Name field is left blank, the file will be named as per the original file name on upload!
 {/tip}
 
-Media can also be directly uploaded to a specified **Folder** location.
+Upload files to a specified Folder location to inherit the View, Edit, Delete Share options that have been applied to the destination Folder for easy User/User Group access:
+
+- Click on the **Select Folder** button and expand to select the Folder to save in.
 
 {tip}
-Media files that are saved in Folders will inherit the View, Edit, Delete Share option that have been applied to the destination Folder for User/User Group access!
-{/tip}
-
-- Click on the **Select Folder** button and expand to select a Folder to save in.
-
-- Users can also right click a Folder to access further options.
-
-{tip}
-Available Folder options are based on enabled [Feature and Sharing](users_features_and_sharing.html) options for a User/User Group.
+Users can also right click a Folder to access further options as enabled in the [Feature and Sharing](users_features_and_sharing.html) options for a User/User Group.
 {/tip}
 
 - Click in the Folder you wish to upload the file to and click **Done**. 
@@ -91,170 +89,159 @@ Available Folder options are based on enabled [Feature and Sharing](users_featur
 
 - Click the **Start upload** button to begin the upload of all files. If a Folder has been selected and you have added multiple files, all files will be uploaded to that location.
 
-Files can also be uploaded individually and have different Folder locations specified.
-Instead of clicking on the Start upload button, click on the **blue upload** button shown at the end of the row for an added file. 
+Files can also be uploaded individually and have different Folder locations specified:
+
+- Instead of clicking on the Start upload button, click on the **blue upload** button shown at the end of the row for an added file. 
 
 - Change the Folder location using the **Select Folder** button as before and then click the blue button at the end of the row to upload just that singular file.
 
-{nonwhite}
-Further information for Administrators regarding Folder access and set-up can be found [here](https://xibo.org.uk/docs/setup/folders-administration)
-{/nonwhite}
-
-{white}
-For further information regarding Folder access and set-up, please speak to your Administrator.
-{/white}
-
-![Single Upload](img/v3_media_single_upload.png)
+![Single Upload](img/v4_media_library_single_upload.png)
 
 - Once all files have been successfully uploaded, click **Done**.
 
 {tip}
-Media files can also be uploaded directly to Layouts using the upload tool from the [Library Search](layouts_library_search.html) function for Images, Audio and Video files. Other file types (such as PDF) can be uploaded by adding the associated **Widget** to a  **Layout**. Files that are added directly to Layouts are saved by default to the Library.
+Media files can also be uploaded directly to Layouts/Playlists using the upload tool from a [Library Search.](layouts_editor.html#content-library-search) Media uploaded to a Playlist have an additional option to set [Widget Expiry Dates](media_playlists.html#content-widget-expiry-dates).
+
+Media files that are uploaded and added directly to Layouts/Playlists are also saved by default to the CMS Media Library.
 {/tip}
 
 ### Add Media via URL
 
-- Select the **Add Media (URL)** button at the top of the grid.
+- Select the **Add Media (URL)** button:
 
-![Upload via URL](img/v3_media_library_upload_url.png)
+![Upload via URL](img/v4_media_library_upload_url.png)
 
-- Use the Select Folder button if you need to select /create a specific Folder to add this media file to.
+- Save to a [Folder](tour_folders.html) to inherit the View, Edit, Delete Share options that have been applied to the destination Folder for easy User/User Group access.
 - Provide the remote URL for the file.
-- Include a Name to be used instead of the file name if required for easier identification in the system.
+- Give your file a **Name** for easier identification in the CMS.
+
+{tip}
+If the Name field is left blank, the file will be named as per the original file name!
+{/tip}
+
 - Click to **Save**.
 
-## Upload Fonts
+## Row Menu
 
-[[PRODUCTNAME]] comes with a set of standard fonts provided by our text editor tool - CKEditor, which are currently:
+Each item in the **Library** has a row menu where Users can access a list of actions/shortcuts
 
-- Aileron Heavy Regular (Aileron-Heavy.otf)
-- Aileron Regular (Aileron-Regular.otf)
-- Dancing Script Regular (DancingScript-Regular.ttf)
-- Railway Regular (Railway.ttf)
-- Linear Regular (linear-by-braydon-fuller.otf)
+## Edit
 
-Additional fonts can be added to the **Library** using the uploader tool. Once added, the font will be available to use in the text editor.
+Select **Edit** to make changes to **Folder** locations, **Durations** and **Tags** and other settings.
 
-{tip}
-If the new font does not show in the text editor after upload, try clearing the browser cache!
-{/tip}
+- Notable settings are listed below:
 
-{tip}
-**Please note:** Fonts have preferences built into then known as **OS/2 tags**. [[PRODUCTNAME]] checks for OS/2 preferences and can use **fonts with OS/2 tags 0 or 8**. Fonts with other OS/2 tags may produce an error on uploading and may not display correctly.
-{/tip}
+### Expiry Dates
 
-Each item in the **Library** has a row menu where users can access a list of actions/shortcuts
+Set an Expiry Date for Library Media to remove the file from any Layouts/Playlists it has been used on. 
 
-![Row Menu](img/v3.1_media_library_row_menu.png)
+### Retire Media
 
-### Edit
+Ticking **Retire this Media** will keep the media file assigned to any existing Layouts/Playlists but will not be made available for further selection to add to Layouts/Playlists.
 
-Make changes to Folder location, Naming, Duration etc:
+### Enable Media Stats Collection
 
-![Edit Media](img/v3.1_media_library_row_menu_edit.png)
-
-- **Current Folder** will show the current file path.  Click **Select Folder** to move to a different location.
-- **Tags** - allow for ordering and make files easier to find.
-
-When entering text into the Tag field on the form, an auto complete helper will show possible matches to make it easier for Users to select from.
-
-Predefined  Values will be shown by using the **Tag value** drop down, if the Value is already known it can be typed directly into the field using the following format: `Colour|Red`
+- Set the collection of [Proof of Play](displays_metrics.html#proof_of_play) statistics to On / Off / Inherit for the selected media file.
 
 {tip}
-If a Value has been set as 'Required' by an Administrator, then the Value must be entered in order to save the form!
+Ensure that **Enable Stats Reporting** has been ticked in [Display Settings](displays_settings.html) in order to collect Proof of Play stats!
 {/tip}
 
-Users can add an associated Value to a Tag that does not already have a predefined value by using the **Tag value** field. If a Tag value is not needed, this field can be left blank.
+### Update Media
+
+Use the check box **Update this Media in all Layouts it is assigned to** so that any edits are reflected in Layouts/Playlists that this media file is currently assigned to. 
 
 {tip}
-Tags can also be assigned to multiple media files using the [With Selected](https://xibo.org.uk/manual/en/tour_grids.html#multi-select) option at the bottom of the Library grid!
+Edits will only be updated in Layouts/Playlists which you have [access](users_features_and_sharing.html#content-share) to edit!
 {/tip}
 
-For further information on what **Tag **and **Tag Values** to use, please speak with your Administrator.
+### Replace Media
 
-{nonwhite}
-Tag management information for Administrators can be found [here](https://xibo.org.uk/docs/setup/tags-adding-editing-assigning)
-{/nonwhite}
+It may be necessary to upload a new revision of an existing file by using the **Replace** button at the bottom of the form.
 
-- **Expiry date** - set a date and time to remove the selected media file completely from the CMS.
+- Upload a replacement file using the same steps as before to [Add Media (Upload).](media_library.html#content-add-media-upload)
+- Tick to **Update** the replacement file to all Layouts/Playlists it is currently assigned to.
+- Tick to **Delete** the old file version completely from the CMS.
+
+## Delete
+
+Media files can only be deleted from the CMS if they are **not** being used on any existing **Layouts/Playlists**.
+
+{version}
+The option to force a delete must be used with caution as deleting a file cannot be reversed.
+{/version}
 
 {tip}
-**Please note**: Expiry dates are currently not supported for the Linux Player.
+[Retiring Content](media_library.html#content-retire-media) rather than deleting it will keep the media file in any existing Layouts/Playlists it has been assigned to, with any scheduled content unaffected. Media will not be available to add to any new Layouts/Playlists.
 {/tip}
 
-{tip}
-**Please note:** This will remove media from any Layouts that contain the selected file.
-{/tip}
+{feat}Purge List|v4{/feat}
 
-{tip}
-If you do not want to completely remove the media file and keep it assigned to existing Layout's then tick the **Retire this media** option. The Media file will not show for selection for new Layouts.
-{/tip}
+- Tick in the box to enable a hard push using XMDS to completely remove the file from a Players local storage.
 
-- **Enable Media Stats Collection** - set the collection of [Proof of Play](displays_metrics.html#proof_of_play) statistics to On / Off / Inherit for the selected Media file.
-
-{tip}
-To collect Proof of Play records ensure that the Enable Stats Reporting has been ticked in [Display Settings](displays_settings.html)
-{/tip}
-
-- **Orientation** - applicable for Images and Videos, set as Landscape or Portrait to set for filtering.
-
-{tip}
-Use the check box **Update this Media in all Layouts it is assigned to** so that edits made are reflected in Layouts that this Media file is currently assigned to. Edits will only be updated in Layouts which you have permission to edit.
-{/tip}
-
-It may be necessary to upload a new revision of an existing file. This can be done by using the **Replace** button at the bottom of the form.
-
-Upload a replacement file using the same steps as before and select whether the replacement file should be updated to all Layouts it is currently assigned to and if the old version should be removed.
-
-### Copy
-
-Make copies of the selected media file, give the copied file a new **Name** and **Tag**.
-
-### Select Folder
-
-Select a Folder to save the media file to.
-
-### Delete
-
-Media files can only be deleted from the CMS if they are **not** being used on any existing **Layouts** .The option to force a delete from any existing Layouts must be used with caution as deleting a file cannot be reversed.
-
-{tip}
-**Retiring Content** means that it will no longer be available to assign to new Layouts but will **remain** in existing Layouts it is assigned to, meaning scheduled content can remain unaffected. Click on **Edit** and tick the box to retire on the Edit Media form!
-{/tip}
-
-Tick in the box to enable a hard push using XMDS to completely remove the file from a Players local storage:
-
-![Purge Media](img/v3.1_media_library_purge.png)
-
-
-
-**Please note:** The Purge list functionality is  supported from Android R301 and Windows R302. We are currently working to bring this to all Players.
-
-### Share
-
-Enable [Share](users_features_and_sharing.html) options for selected Users/User Groups.
-
-### Download
-
-Download a copy of the **media file** for ease of sharing.
-
-### Enable Stats collection
-
-Enable the collection of Proof of Play statistics.
 
 ### Usage Report
 
+{tip}
+This report is great to use to make final checks prior to tidying media files!
+{/tip}
+
 This will show if the selected **media file** is directly assigned/scheduled to **Displays**. 
 
-![Library Usage Report](img/v3_media_library_usage_report.png)
+![Library Usage Report](img/v4_media_library_usage_report.png)
 
 - Use the Layout tab to see what **Layouts** the media file is currently included in. 
 
-
 {tip}
-The **Usage Report** is great to make final checks prior to tidying media files.
+Use the [With Selected](tour_cms_navigation.html#content-multi-select---with-selected) option at the bottom of the Library grid to muti-select rows to easily perform bulk actions!
 {/tip}
 
+### Schedule
+
+Image and Video Library media files can be directly Scheduled to a Display as full screen content from the row menu.
+
+- Click **Schedule**
+
+![Schedule Library Media](img/v4_media_library_schedule_fullscreen.png)
+
+- Set the **Duration** of the item to determine how long this media file should be shown each time it appears in the schedule. Use the duration,as set in the Media Library by leaving this field blank.
+- Optionally select a **Resolution** to use. If left blank a resolution that matches closest in size to the selected media file will be used.
+- An optional **Background Colour** can be set to fill any gaps if the media does not fill the entire screen.
+- **Save**
+- Complete the rest of the form fields to complete the new [Schedule](scheduling_events.html).
+
+## Tidy Library
+
+As the CMS is used and Layouts/Playlists and Media are added, over time the Library can become cluttered with old content that is no longer in use.
+
+The Library can be *tidied* by a User or Super Administrator so that it is kept clean and small. 
+**Actions cannot be reversed so this must be used with caution.**
+
 {tip}
-Use the **With Selected** option at the bottom of the Library [Grid](tour_grids.html) to Edit Tags, Move to Folder, Delete and Share in bulk!
+This might be particularly useful if the CMS is installed on a web server that has quotas or if Users have been assigned their own quotas!
 {/tip}
+
+There are two places where the Library can be tidied:
+
+1. From [CMS Settings](tour_cms_settings.html#content-tidy-library-(global)) - available to all Super Administrators only.
+2. From the **Library**  - for all Users when [Enable Library Tidy](tour_cms_settings.html#content-tidy-from-user-library) is ticked.
+
+{nonwhite}
+{cloud}
+The Tidy Library function is turned off by default for **Xibo Cloud Hosting** customers as it can be potentially destructive if the options are not fully understood. Use the checkbox to [Enable Library Tidy](tour_cms_settings.html#content-tidy-from-user-library) if required.
+{/cloud}
+{/nonwhite}
+
+Once enabled Users can click on a **Tidy Library** button located at the top of the Library page:
+
+![Tidy from Library](img/v4_media_library_tidylibrary.png)
+
+ The form will show the number of files that will be deleted and how much space those files take up.
+
+{tip}
+This will only delete files that are owned by the logged in User which are no longer in use on a Layout or Assigned to a Display Group/Display.
+{/tip}
+
+#### Next...
+
+[Modules and Connectors](media_modules.html)
